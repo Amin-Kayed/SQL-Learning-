@@ -65,3 +65,11 @@ flowchart LR
     C --> D[Oracle Database]
     D --> C
     C --> B
+```
+## Database & ORDS Setup
+1. Activate the Listener
+2. Open Powershell as Administrator --> sqlplus / as sysdba
+3. Change to existing/uniform service name --> ALTER SESSION SET CONTAINER = FREEPDB1
+4. Connect APEX with Oracle DB by ORDS (keep config environment and production environment seperated) --> C:Users..(config environment)> java -jar C:Users...(prdouction environment) ords serve   
+5. Connect in SQL Developer for excecuting SQL queries
+6. Call up the link for connecting in APEX (frontend) --> localhost:port/ords 
